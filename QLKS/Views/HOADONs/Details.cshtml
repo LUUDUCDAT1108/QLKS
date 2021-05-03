@@ -1,0 +1,51 @@
+﻿@model QLKS.Models.HOADON
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOADON</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhThucTT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhThucTT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

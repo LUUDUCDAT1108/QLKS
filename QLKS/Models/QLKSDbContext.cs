@@ -12,11 +12,12 @@ namespace QLKS.Models
         {
         }
 
-        public virtual DbSet<KHACHHANG> KHACHHANGS { get; set; }
+        public virtual DbSet<KhachHang>KhachHangs { get; set; }
         public virtual DbSet<PHONG> PHONGS { get; set; }
         public virtual DbSet<DICHVU> DICHVUS { get; set; }
         public virtual DbSet<HOADON> HOADONS { get; set; }
         public virtual DbSet<THUEPHONG> THUEPHONGS { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }

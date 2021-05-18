@@ -128,18 +128,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DICHVUsController.cs" />
     <Compile Include="Controllers\HOADONsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KHACHHANGsController.cs" />
+    <Compile Include="Controllers\KhachHangsController.cs" />
     <Compile Include="Controllers\PHONGsController.cs" />
     <Compile Include="Controllers\THUEPHONGsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105031412417_Create_Table_KHACHHANG.cs" />
-    <Compile Include="Migrations\202105031412417_Create_Table_KHACHHANG.Designer.cs">
-      <DependentUpon>202105031412417_Create_Table_KHACHHANG.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202105031417177_Create_Table_PHONG.cs" />
     <Compile Include="Migrations\202105031417177_Create_Table_PHONG.Designer.cs">
@@ -157,10 +154,23 @@
     <Compile Include="Migrations\202105031428188_Create_Table_THUEPHONG.Designer.cs">
       <DependentUpon>202105031428188_Create_Table_THUEPHONG.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105101551488_Create_Table_KhachHang.cs" />
+    <Compile Include="Migrations\202105101551488_Create_Table_KhachHang.Designer.cs">
+      <DependentUpon>202105101551488_Create_Table_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105101559088_abc.cs" />
+    <Compile Include="Migrations\202105101559088_abc.Designer.cs">
+      <DependentUpon>202105101559088_abc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105171404539_Create_Table_Accounts.cs" />
+    <Compile Include="Migrations\202105171404539_Create_Table_Accounts.Designer.cs">
+      <DependentUpon>202105171404539_Create_Table_Accounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\DICHVU.cs" />
     <Compile Include="Models\HOADON.cs" />
-    <Compile Include="Models\KHACHHANG.cs" />
+    <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\PHONG.cs" />
     <Compile Include="Models\QLKSDbContext.cs" />
     <Compile Include="Models\THUEPHONG.cs" />
@@ -560,11 +570,6 @@
     <Content Include="Views\HOADONs\Details.cshtml" />
     <Content Include="Views\HOADONs\Edit.cshtml" />
     <Content Include="Views\HOADONs\Index.cshtml" />
-    <Content Include="Views\KHACHHANGs\Create.cshtml" />
-    <Content Include="Views\KHACHHANGs\Delete.cshtml" />
-    <Content Include="Views\KHACHHANGs\Details.cshtml" />
-    <Content Include="Views\KHACHHANGs\Edit.cshtml" />
-    <Content Include="Views\KHACHHANGs\Index.cshtml" />
     <Content Include="Views\PHONGs\Create.cshtml" />
     <Content Include="Views\PHONGs\Delete.cshtml" />
     <Content Include="Views\PHONGs\Details.cshtml" />
@@ -575,9 +580,16 @@
     <Content Include="Views\THUEPHONGs\Details.cshtml" />
     <Content Include="Views\THUEPHONGs\Edit.cshtml" />
     <Content Include="Views\THUEPHONGs\Index.cshtml" />
+    <Content Include="Views\KhachHangs\Create.cshtml" />
+    <Content Include="Views\KhachHangs\Delete.cshtml" />
+    <Content Include="Views\KhachHangs\Details.cshtml" />
+    <Content Include="Views\KhachHangs\Edit.cshtml" />
+    <Content Include="Views\KhachHangs\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\Excels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -593,9 +605,6 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105031412417_Create_Table_KHACHHANG.resx">
-      <DependentUpon>202105031412417_Create_Table_KHACHHANG.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105031417177_Create_Table_PHONG.resx">
       <DependentUpon>202105031417177_Create_Table_PHONG.cs</DependentUpon>
     </EmbeddedResource>
@@ -607,6 +616,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105031428188_Create_Table_THUEPHONG.resx">
       <DependentUpon>202105031428188_Create_Table_THUEPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105101551488_Create_Table_KhachHang.resx">
+      <DependentUpon>202105101551488_Create_Table_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105101559088_abc.resx">
+      <DependentUpon>202105101559088_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105171404539_Create_Table_Accounts.resx">
+      <DependentUpon>202105171404539_Create_Table_Accounts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

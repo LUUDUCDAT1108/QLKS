@@ -8,10 +8,12 @@ namespace QLKS.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
         }
+        [Authorize]
 
         public ActionResult About()
         {
@@ -19,6 +21,7 @@ namespace QLKS.Controllers
 
             return View();
         }
+        [Authorize]
 
         public ActionResult Contact()
         {

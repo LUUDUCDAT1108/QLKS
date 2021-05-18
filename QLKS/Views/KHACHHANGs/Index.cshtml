@@ -1,58 +1,40 @@
-﻿@model IEnumerable<QLKS.Models.KHACHHANG>
+﻿@model IEnumerable<QLKS.Models.KhachHang>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>KHÁCH HÀNG </h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Tạo  mới ", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-           <label>Mã Khách Hàng</label>
-        </th>
-        <th>
-           <label>Tên Khách Hàng </label>
+            @Html.DisplayNameFor(model => model.HoTenKH)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SoDT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CMCC)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhanLoaiKH)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MaKH)
-    </td>
-    <td>
-        @Html.Raw(item.HoTenKH)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SoDT)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CMCC)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PhanLoaiKH)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MaKH }) |
-        @Html.ActionLink("Details", "Details", new { id = item.MaKH }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.MaKH })
-    </td>
-</tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaKH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaKH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaKH })
+        </td>
+    </tr>
 }
 
 </table>

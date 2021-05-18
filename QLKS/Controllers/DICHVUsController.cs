@@ -14,7 +14,7 @@ namespace QLKS.Controllers
     {
         private QLKSDbContext db = new QLKSDbContext();
 
-        // GET: DICHVUs
+        
         public ActionResult Index()
         {
             return View(db.DICHVUS.ToList());
